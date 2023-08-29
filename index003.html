@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>003. js 이벤트리스너</title>
+  <link rel="stylesheet" href="main001.css">
+</head>
+
+<body>
+  <div class="alert-box" id="alert">
+    <p id="title" class="title1">알림창임</p>
+    <button onclick="alert('none')">닫기</button>
+    <button id="close">닫기(이벤트리스너)</button>
+  </div>
+
+  <!-- 복잡하면 한글부터 짜고 코드로 옮기기 -->
+  <button onclick="아이디알림창()">버튼1</button>
+  <button onclick="비번알림창()">버튼2</button>
+  <button onclick="알림창('아이디입력하셈');">버튼1</button>
+  <button onclick="알림창('비번입력하셈');">버튼2</button>
+
+
+  <script>
+    // *이벤트 리스너*
+    // event가 뭐냐면? 클릭, 키입력, 스크롤, 드래그 등 ==> 이벤트라고함.
+    // event 감지하고 싶으면 addEventListener('이벤트명') 쓰면 됨.
+    // 일종의 감시자 역할이라고 생각하면 됨.
+    document.getElementById('close').addEventListener('click', function(){
+      document.getElementById('alert').style.display = 'none';
+    });
+    
+    function alert(e) {
+      document.getElementById('alert').style.display = e;
+    }
+
+    // p태그 내용을 아이디 입력으로 바꿈
+    function 아이디알림창() {
+      // ClassName 셀렉터를 사용할땐 항상뒤에 인덱싱이란 걸 해줘야함.
+      // 왜냐? 클래스명이 있는걸 다 찾아주기 때문임.
+      document.getElementsByClassName('title1')[0].innerHTML = '아이디입력하셈';
+      document.getElementById('alert').style.display = 'block';
+    }
+
+    // p태그 내용을 비밀번호입력으로 바꿈
+    function 비번알림창() {
+      document.getElementById('title').innerHTML = '비번입력하셈';
+      document.getElementById('alert').style.display = 'block';
+    }
+
+    // 파라미터를 활용한 방법
+    // p태그 내용을 아이디입력, 비번입력으로 바꿈
+    function 알림창(e) {
+      document.getElementById('title').innerHTML = e;
+      document.getElementById('alert').style.display = 'block';
+    }
+
+  </script>
+</body>
+
+</html>

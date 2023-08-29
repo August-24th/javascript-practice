@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>002.함수의 파라미터 문법</title>
+  <link rel="stylesheet" href="main001.css">
+</head>
+
+<body>
+  <div class="alert-box" id="alert">알림창임
+    <button class="alert-close" onclick="alertOpen('none')">닫기</button>
+  </div>
+  <button onclick="alertOpen('block');">버튼임</button>
+
+
+  <script>
+    // function 작명(){}
+    // function alertOpen(구멍) {
+    //   document.getElementById('alert').style.display = '구멍(파라미터)';
+    //   // 함수에 구멍(파라미터)을 뚫는다고 생각하면됨
+    // }
+
+    // alertOpen('바보'); // 구멍에 '바보' 넣어서 알림창 열기 안의 코드 실행해주셈
+
+    function alertOpen(e) {
+      document.getElementById('alert').style.display = 'e';
+    }
+    // 파라미터 문법은 필수 문법은 아니고,
+    // 함수를 여러개를 만들고 싶지 않을 때 하나로 해결하고싶을 때 쓰면됨!
+
+    
+
+  </script>
+</body>
+
+</html>

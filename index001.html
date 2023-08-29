@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>001.시작</title>
+  <link rel="stylesheet" href="main001.css">
+</head>
+
+<body>
+  <!-- alert 박스와 기능 만들기 -->
+  <!-- UI를 만드는 step.
+  1번째, html/css 디자인 다 하기(필요하면 미리 숨김)
+  2번째, 필요할 때 보여달라고 코드짜기(js로) -->
+  
+  <div class="alert-box" id="alert">알림창임
+    <button class="alert-close" onclick="document.getElementById('alert').style.display = 'none';">닫기</button>
+  </div>
+  <!-- <button onclick="alert박스 보여주셈~이라고 코드를 짜면됨">버튼임</button> -->
+  <button onclick="alertOpen()">버튼임</button>
+
+
+  <script>
+    // function 작명(){}
+    function alertOpen() {
+      document.getElementById('alert').style.display = 'block';
+      // 긴 코드를 짧게 축약해서 쓰고 싶을 때 function 꺼내서 쓰기, 긴코드 재사용 잦을 때 편리
+      // 작명() <-- 이렇게 가져다 쓰면 이안에있는 코드가 남음.
+    }
+
+
+  </script>
+</body>
+
+</html>

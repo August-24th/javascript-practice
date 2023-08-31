@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>007. Array와 Object 자료형</title>
+</head>
+
+<body>
+
+  <script>
+  // 01. array 자료형
+  // 대괄호를 열고 콤마로 구분해서 집어 넣으면 됨
+  var car = ['소나타', 50000, 'white'];
+
+  // array 자료에서 데이터를 뽑을 때 대괄호를 뒤에 붙이면 됨
+  console.log(car[1]);
+
+  // array 자료를 수정하고 싶을 때 등로를 이용해서 수정하면 됨.
+  car[1] = 60000;
+
+
+  // 02. Object 자료형
+  // 중괄호를 열고 자료를 콤마로 구분해서 집어넣으면 됩니다.
+  // 멋진 말로 자료의 이름은 key, 실제 자료는 value라고 부름
+  var car2 = { name : '소나타', price : 50000 };
+
+
+  // [ array/Object 차이 ]
+  // array는 순서개념이 있음! 왼쪽에 적을 수록 더 앞에 있는 자료임
+  // object는 순서개념이 없음! 가장 왼쪽에 적었다고 해도 1빠임을 보장 X
+  // - 가나다순 정렬
+  // - x번 자료부터 x번 자료까지 자르기
+  // - x번 자료 바꾸기
+  // - 맨 뒤, 맨 앞에 자료 넣기
+  // - 원하는 자료가 들어있나 검색
+  // 순서개념이 필요한 많은 것들을 할 수 있음.
+
+  </script>
+</body>
+
+</html>

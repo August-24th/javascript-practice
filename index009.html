@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>009. array에 자주 쓰는 sort, map, filter 함수</title>
+</head>
+
+<body>
+
+  <script>
+    // 01. sort 함수
+    // 원본을 변형시킴
+    let 어레이 = [7, 3, 5, 2, 40];
+    어레이.sort(function (a, b) {
+      return a - b
+    });
+
+    console.log(어레이);
+    // 1. a, b는 array 안의 자료들임.
+    // 2. return 오른쪽이 양수면 a를 오른쪽으로 정렬해줌
+    // 3. return 오른쪽이 음수면 b를 오른쪽으로 정렬해줌
+    // 4. 그리고 array 안의 자료들을 계속 뽑아서 a, b에 넣어줌 
+    // 이렇게 동작해서 a - b 저렇게 쓰면 숫자순 정렬이 되는 것
+
+    // 예를 들면 a, b가 7과 3일 경우 7 - 3 하면 4가 남음
+    // 4는 양수죠? 그러면 7을 3보다 오른쪽으로 보내줌
+    // 그래서 숫자 오름차순 (123순) 정렬이 완성되는 것
+
+
+    // 02. filter 함수
+    // array에 자주 쓰는 filter 함수
+    // array 자료에서 원하는 자료만 필터링하고 싶으면 filter 함수를 씀.
+    let 어레이 = [7,3,5,2,40];
+
+    let 새어레이 = 어레이.filter(function(a){ // 변수에다 저장해서 써야함.
+      return 조건식
+    });
+    // 1. a라고 작명한건 array 에 있던 데이터를 뜻하고
+    // 2. return 우측에 조건식을 넣으면 조건식에 맞는 a만 남겨줍니다.
+    // 3. filter는 원본을 변형시키지 않음, 따라서 새로운 변수에 담아써야 함. 
+
+
+    // 03. map 함수
+    // array 안의 자료들을 전부 변형하려면 map 함수를 씀.
+    let 어레이 = [7,3,5,2,40];
+
+    let 새어레이 = 어레이.map(function(a){
+      return 수식같은거
+    });
+
+
+  </script>
+</body>
+
+</html>

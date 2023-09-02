@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>011. 구조분해할당</title>
+</head>
+
+<body>
+
+  <script>
+    // 01. 구조 분해 할당 구문은?
+    // 배열이나 객체의 속성을 분해해서 그 값을 변수에 담을 수 있게 하는 표현식
+    let [x, y] = [1, 2];
+
+    console.log(x); // 1
+    console.log(y); // 2
+
+
+    // 배열 구조분해 예제
+    let users = ['짱구', '훈이', '유리'];
+    let [user1, user2, user3] = users;
+    
+    console.log(user1); // '짱구'
+    console.log(user2); // '훈이'
+    console.log(user3); // '유리'
+
+
+    // 객체 구조 분해 예제
+    let user = {name: 'Mike', age: 30};
+    
+    let {name, age} = user;
+    // 위 코드는 아래와 같음.
+    // let name = user.name;
+    // let age = user.age;
+
+
+  </script>
+</body>
+
+</html>

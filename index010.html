@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>010. 나머지 매개변수, 전개 구분</title>
+</head>
+
+<body>
+
+  <script>
+    // 1. 나머지 매개변수(Rest Parameters)
+    function showName(...names) {
+      console.log(names);
+    }
+
+    showName(); // []
+    showName('Mike'); // ['Mike']
+    showName('Mike', 'Tom'); // ['Mike', 'Tom']
+
+    // 나머지 매개변수는 정해지지 않은 갯수의 인수를 배열로 나타낼 수 있게함.
+    // ...배열이름
+    // 아무것도 정하지 않으면 undefined 가 아닌, 빈배열이 나타남.
+
+
+    // 2. 전개 구문(Spread syntax) : 배열
+    let arr1 = [1,2,3];
+    let arr2 = [4,5,6];
+
+    let result = [0, ...arr1, ...arr2, 7, 8, 9]; // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    // 중간에 쓰는것도 가능함.
+    // 원래 배열을 넣고, 중간에 빼고 병합하는것이 번거로움. 하지만 전개구문을 사용하면 편함.
+
+    // 객체도 가능함.
+    let user = {name : '짱구', age : 5};
+    let user2 = {...user};
+
+    user2.name = "훈이";
+    
+    console.log(user.name); // "짱구"
+    console.log(user2.name); // "훈이"
+    // user2의 이름을 바꾸어도 user의 name에는 아무런 영향을 미치지 않음. 
+    // 결론적으로 user2로 복제된거임.
+    
+
+
+  </script>
+</body>
+
+</html>
